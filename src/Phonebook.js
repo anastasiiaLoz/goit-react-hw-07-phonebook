@@ -4,9 +4,9 @@ import ContactsList from "./Components/contactsList/ContactsList";
 import ContactsSection from "./Components/contactsSection/ContactsSection";
 import ContactsFilter from "./Components/contactsFilter/ContactsFilter";
 import { connect } from "react-redux";
-import { getAllContacts, filterContacts } from "./redux/actions/actions";
+import { filterContacts } from "./redux/actions/actions";
 import { contactsFilter, getContactsSelector } from "./redux/selectors/selectors";
-import { addContactOperation, deleteContactOperation } from "./redux/operations/operations";
+import { addContactOperation, deleteContactOperation, getAllContactsOperation } from "./redux/operations/operations";
 
 class Contacts extends Component {
   async componentDidMount() {
@@ -62,7 +62,7 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = {
   addContactOperation,
   deleteContactOperation,
-  getAllContacts,
+  getAllContactsOperation,
   filterContacts
 };
 
