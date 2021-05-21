@@ -10,7 +10,7 @@ import { addContactOperation, deleteContactOperation, getAllContactsOperation } 
 
 class Contacts extends Component {
   async componentDidMount() {
-    this.props.getAllContacts();
+    this.props.getAllContactsOperation();
   }
 
   addContact = async contact => {
